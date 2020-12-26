@@ -1,7 +1,7 @@
 import pandas as pd
 from helper_functions import *
 from sklearn.tree import DecisionTreeClassifier
-from sklearn import metrics
+from sklearn.metrics import accuracy_score
 
 train = pd.read_csv("dataset/train.csv")
 train_labels = pd.read_csv("dataset/train_labels.csv")
@@ -16,7 +16,6 @@ prepare_columns(test, columns)
 classifier = DecisionTreeClassifier()
 classifier.fit(train, train_labels)
 pred_labels = classifier.predict(test)
-print(pred_labels)
-print("Accuracy:", metrics.accuracy_score(test_labels, pred_labels))
+print("Accuracy:", accuracy_score(test_labels, pred_labels))
 
 
