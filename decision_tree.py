@@ -16,4 +16,7 @@ prepare_columns(test, columns)
 classifier = DecisionTreeClassifier()
 classifier.fit(train, train_labels)
 pred_labels = classifier.predict(test)
+print(pred_labels)
 print("Accuracy:", metrics.accuracy_score(test_labels, pred_labels))
+
+
