@@ -17,5 +17,3 @@ classifier = DecisionTreeClassifier()
 classifier.fit(train, train_labels)
 pred_labels = classifier.predict(test)
 print("Accuracy:", accuracy_score(test_labels, pred_labels))
-
-
