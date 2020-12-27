@@ -9,7 +9,6 @@ train_labels = pd.read_csv("dataset/train_labels.csv")
 test = pd.read_csv("dataset/test.csv")
 test_labels = pd.read_csv("dataset/test_labels.csv")
 
-
 columns = {'PassengerId': False, 'Pclass': False, 'Name': True, 'Sex': True, 'Age': False, 'SibSp': False,
            'Parch': False, 'Ticket': False, 'Fare': False, 'Cabin': True, 'Embarked': True}
 prepare_columns(train, columns)
